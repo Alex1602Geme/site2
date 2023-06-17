@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Inter:wght@400;764&family=M+PLUS+Rounded+1c:wght@700&family=Open+Sans:wght@300;500&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .m1{
+            position: relative;
+            background-image: url(/island.mp4);
+            width: 100%;
+            height: 1000px;
+        }
+        .b3{
+            position: relative;
+            top: 60%;
+            left: -10%;
+        }
+        .b2{
+            position: relative;
+            top: 55%;
+            left: 30%;
+        }
+        .b5{
+            position: relative;
+            top: 80%;
+            left: -20%;
+        }
+        .b1{
+            position: relative;
+            left: 80%;
+            top: 65%;
+        }
+        .b4{
+            position: relative;
+            right: 10%;
+            top: 20%;
+        }
+        .b1:hover{
+            transform: scale(1.05);
+        }
+        .b2:hover{
+            transform: scale(1.05);
+        }
+        .b3:hover{
+            transform: scale(1.05);
+        }
+        .b4:hover{
+            transform: scale(1.05);
+        }
+        .b5:hover{
+            transform: scale(1.05);
+        }
+        .b5::before{
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            color: white;
+            font-size: 20px;
+            content: "lorem.";
+        }
+        .line{
+            width: 100%;
+            height: 100px;
+            background-color: white;
+        }
+        .text-w{
+            position: relative;
+            color: white;
+            font-size: 100px;
+            text-align: left;
+            font-family: 'Gasoek One', sans-serif;
+        }
+        .text-viol{
+            position: relative;
+            color: #8459ff;
+            font-size: 100px;
+            text-align: left;
+            font-family: 'Gasoek One', sans-serif;
+        }
+        .text-y{
+            position: relative;
+            color: yellow;
+            font-size: 100px;
+            text-align: left;
+            font-family: 'Gasoek One', sans-serif;
+        }
+        .text-m2{
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+            font-size: 30px;
+        }
+        .m2{
+            background-color: blueviolet;
+            height: 700px;
+            padding: 80px;
+        }
+        .im2_1{
+            width: 300px;
+            position: absolute;
+            left: -10%;
+            animation: dtc4 5s infinite linear;
+            z-index: 1;
+            
+        }
+        .im2_2{
+            width: 300px;
+            position: absolute;
+            left: 80%;
+            top: 100%;
+            z-index: 0;
+            animation: dtc3 5s infinite linear;
+            z-index: 1;
+        }
+        .im2_3{
+            width: 250px;
+            position: absolute;
+            left: 60%;
+            top: 110%;
+            z-index: 0;
+            transform: rotate(20deg);
+            animation: dtc2 5s infinite linear;
+            transition: 2s;
+            z-index: 1;
+        }
+        .im2_3:hover{
+            transform: scale(1.1);
+        }
+        .butt_m2{
+            border: 10px solid black;
+            background-color: black;
+            border-radius: 20px;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 30px;
+            width: 200px;
+        }
+        .m3{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+            width: 100%;
+            height: 900px;
+        }
+        .m3_t1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            background-color: #e3a8ff;
+            padding:80px;
+        }
+        .m3_t2{
+            grid-column-start: 3;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            background-color: #fff1e4;
+            padding-left: 40%;
+        }
+        .m3_t3{
+            background-color: #8459ff;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 3;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            
+        }
+        .m3_t4{
+            background-image: url(https://imaginaryones.com/_nuxt/videos/rainbow-head-pink.22eaf45.mp4);
+            background-position: -50px -10px;
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 3;
+        }
+        .m3_t5{
+            background-image: url(/line.mp4);
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: -10px;
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row-start: 3;
+            grid-row-end: 3;
+            padding: 30PX;
+        }
+        .we{
+            color: black;
+            font-size: 80px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .cube1-h1{
+            font-size: 50px;
+            color: #fd0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .cube2-h1{
+            font-size: 50px;
+            color: #8459ff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .cube3-h1{
+            font-size: 50px;
+            color: #e3a8ff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .cube4-h1{
+            font-size: 50px;
+            color: #eefff7;
+            font-family: 'Roboto', sans-serif;
+        }
+        .m3_t3 h1{
+            font-family: 'Roboto', sans-serif;
+            font-size: 100px;
+            position: absolute;
+            mix-blend-mode: screen;
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding-top: 70px;
+            
+        }
+        .img_back{
+            position: absolute;
+            object-fit: cover;
+            top:0;
+            left: 0;
+        }
+        .m4{
+            margin-top: 100px;
+            background-color: #eefff7;
+            width: 100%;
+            height: 100%;
+            padding: 100px;
+        }
+        .img1_m4{
+            position: relative;
+            width: 300px;
+            
+        }
+        .text-b{
+            margin-top: 40px;
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .img2_m4{
+            position: absolute;
+            left: 75%;
+            top: 300%;
+            width: 300px;
+            animation: dtc1 5s infinite linear;
+        }
+        .img3_m4{
+            position: absolute;
+            left: 60%;
+            width: 250px;
+            transform: rotate(20deg);
+            transition: 2s;
+            animation: dtc0 5s infinite linear;
+        }
+        .img3_m4:hover{
+            transform: scale(1.1);
+        }
+        @keyframes dtc0 {
+            0%{
+                top: 300%;
+            }
+            50%{
+                top: 295%;
+            }
+            100%{
+                top: 300%;
+            }
+        }
+        @keyframes dtc1 {
+            0%{
+                top: 300%;
+            }
+            50%{
+                top: 305%;
+            }
+            100%{
+                top: 300%;
+            }
+        }
+        @keyframes dtc2 {
+            0%{
+                top: 110%;
+            }
+            50%{
+                top: 115%;
+            }
+            100%{
+                top: 110%;
+            }
+        }
+        @keyframes dtc3 {
+            0%{
+                top: 100%;
+            }
+            50%{
+                top: 95%;
+            }
+            100%{
+                top: 100%;
+            }
+        }
+        @keyframes dtc4 {
+            0%{
+                top: 0%;
+            }
+            50%{
+                top: 5%;
+            }
+            100%{
+                top: 0%;
+            }
+        }
+        .logo{
+            z-index: 2;
+            position: absolute;
+            right: 10%;
+        }
+    .lqjrdie95ho {
+        position: absolute;
+        perspective: 2000px;
+        top: 50%;
+        left: 50%;
+        transform-style: preserve-3d;
+        transform: rotate(180deg);
+        animation: rotateY 5s linear infinite;
+      }
+
+      .lqjrdie95ho {
+        position: absolute;
+        top: 220%;
+        left: 15%;
+        transform-style: preserve-3d;
+        text-align: center;
+      }
+
+      .lqjrdie95ho .face {
+        position: absolute;
+      }
+
+      .lqjrdie95ho .-front {
+        width: 275px;
+        height: 58px;
+        transform: translate(-50%, -50%) rotateY(0deg) translateZ(29px);
+        background-color: blueviolet;
+      }
+
+      .lqjrdie95ho .-left {
+        width: 58px;
+        height: 58px;
+        transform: translate(-50%, -50%) rotateY(90deg) translateZ(87.5px);
+        background-color: brown;
+      }
+
+      .lqjrdie95ho .-top {
+        width: 275px;
+        height: 58px;
+        transform: translate(-50%, -50%) rotateX(90deg) translateZ(29px);
+        background-color: chocolate;
+      }
+
+      .lqjrdie95ho .-bottom {
+        width: 275px;
+        height: 58px;
+        transform: translate(-50%, -50%) rotateX(-90deg) translateZ(29px);
+        background-color: deeppink;
+      }
+
+      .lqjrdie95ho .-right {
+        width: 58px;
+        height: 58px;
+        transform: translate(-50%, -50%) rotateY(-90deg) translateZ(87.5px);
+        background-color: lightcoral;
+      }
+
+      .lqjrdie95ho .-back {
+        width: 275px;
+        height: 58px;
+        transform: translate(-50%, -50%) rotateY(180deg) translateZ(29px);
+        background-color: darkorchid;
+      }
+      .m5{
+        background-image: url(https://imaginaryones.com/_nuxt/img/green.b7d2703.jpg);
+        width: 100%;
+        height: 1000px;
+        padding: 60px;
+        display: flex;
+      }
+      .m5_rt{
+        background-color: white;
+        border-radius: 40px;
+        width: 500px;
+        height: 700px;
+        margin-left: 20%;
+        font-family: 'Roboto', sans-serif;
+        padding: 40px;
+        font-size: 30px;
+        z-index: 2;
+      }
+      .m5_lt{
+        margin-left: 50px;
+      }
+      .m5_zag{
+        position: relative;
+        color: white;
+        background-color: #1ab791;
+        border: 10px solid #1ab791;
+        font-size: 70px;
+        width: 600px;
+        border-radius: 50px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      @keyframes rotateY {
+        from {
+          transform: rotateX(0deg);
+        }
+        to {
+          transform: rotateX(360deg);
+        }
+      }
+      .m5_pzag{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        color: rgba(255, 255, 255, 0.505);
+        font-size: 70px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+      }
+      .m5_img1{
+        width: 300px;
+        position: absolute;
+        left: 40%;
+      }
+      .m5_img2{
+        width: 300px;
+        position: absolute;
+        left: 80%;
+      }
+      .m6{
+        margin: auto;
+        width: 1000px;
+        height: 300px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      .m6 .textbig{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 100px;
+        position: absolute;
+        mix-blend-mode: screen;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding-top: 70px;
+        color: black;
+            
+        }
+    .chah1{
+        z-index: 2;
+        position: absolute;
+        left: 30%;
+        top: 520%;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        color: black;
+        font-size: 100px;
+        margin: auto;
+        width: 650px;
+        }
+    .video_back{
+            position: absolute;
+            object-fit: cover;
+            top:0;
+            left: 0;
+        }
+    .m7{
+        width: 100%;
+        height: 1100px;
+        background-image: url(https://imaginaryones.com/_nuxt/videos/slider-desktop.125274a.mp4);
+        }
+    .m8{
+        background-color: #fff1e4;
+        padding-top: 50px;
+        text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+
+    }
+    .m8 article{
+        display: grid;
+        grid-template-columns: 3;
+        grid-template-rows: 1;
+        height: 700px;
+    }
+    .v3_m8{
+        background-color: #f4f2ff;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        padding-bottom: 10px;
+    }
+    .v2_m8{
+        background-color: #eefff7;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding-bottom: 10px;
+    }
+    .v1_m8{
+        background-color: #ffeced;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding-bottom: 10px;
+    }
+    .v3_m8 h1{
+        text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 40px;
+    }
+    .v2_m8 h1{
+        text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 40px;
+    }
+    .v1_m8 h1{
+        text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 40px;
+    }
+    .v3_m8 p{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .v2_m8 p{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .v1_m8 p{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .m8_h1{
+        color: #8459ff;
+        font-size: 150px;
+        margin-bottom: 70px;
+    }
+    .v1_m8 video{
+        width: 548px;
+    }
+    .v2_m8 video{
+        width: 548px;
+    }
+    .v3_m8 video{
+        width: 548px;
+    }
+    .m9{
+        padding: 30px;
+        background-color: #fff1e4;
+        width: 100%;
+        height: 1000px;
+    }
+    .m9_zag{
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+    }
+    .m9_pzag1{
+        font-size: 130px;
+        color: #8459ff;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+    }
+    .m9_pzag2{
+        font-size: 130px;
+        color: #fd0;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+    }
+    .m9_who{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+    }
+    .m9_who_1{
+        width: 455px;
+        height: 634px;
+        background-color: white;
+        border-radius: 50px;
+    }
+    .m9_who_1 article{
+        padding-top: 10px;
+        width: 100%;
+        height: 100px;
+        background-color: #8459ff;
+        border-radius: 50px 50px 0px 0px;
+        color: white;
+        text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 40px;
+    }
+    .m9_who_2{
+        width: 455px;
+        height: 634px;
+        background-color: white;
+        border-radius: 50px;
+    }
+    .m9_who_2 article{
+        padding-top: 10px;
+        width: 100%;
+        height: 100px;
+        background-color: #fd0;
+        border-radius: 50px 50px 0px 0px;
+        color: white;
+        text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 40px;
+    }
+    .m9_who_1 video{
+        margin-left: 80px;
+    }
+    .m9_who_2 video{
+        margin-left: 80px;
+    }
+    .m9_who_1 h1{
+        color: black;
+        text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 40px;
+    }
+    .m9_who_2 h1{
+        color: black;
+        text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 40px;
+    }
+    .m9_who_1 h3{
+        color: black;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .m9_who_2 h3{
+        color: black;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .m10{
+        background-color: #8459ff;
+        width: 100%;
+        height: 900px;
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-right: 300px;
+    }
+    .text-m10{
+        color: white;
+        margin-top: 20px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .text-w_m10{
+            position: relative;
+            color: white;
+            font-size: 100px;
+            text-align: left;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+    .text-y_m10{
+            color: yellow;
+            font-size: 100px;
+            text-align: left;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+    .img1_m10{
+        position: absolute;
+        left: 80%;
+        width: 300px;
+        animation: am10 5s infinite linear;
+    }
+    .img2_m10{
+        position: absolute;
+        left: -10%;
+        width: 300px;
+    }
+    @keyframes am10{
+        0%{
+            top: 900%;
+        }
+        50%{
+            top: 905%;
+        }
+        100%{
+            top: 900%;
+        }
+    }
+    footer{
+        margin-top: 70px;
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        padding-left: 70px;
+        padding-top: 30px;
+    }
+    footer h3{
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <main class="m1">
+        <img src="https://imaginaryones.com/_nuxt/img/box-teal.146a334.png" alt="" class="b1" width="300">
+        <img src="https://imaginaryones.com/_nuxt/img/box-purple.75a803b.png" alt="" class="b2" width="300">
+        <img src="https://imaginaryones.com/_nuxt/img/box-orange.1d585e1.png" alt="" class="b3" width="300">
+        <img src="https://imaginaryones.com/_nuxt/img/box-green.e913ac3.png" alt="" class="b4" width="300">
+        <img src="https://imaginaryones.com/_nuxt/img/box-blue.d7b1995.png" alt="" class="b5" width="300">
+        <img src="logo.png" alt="" width="300" class="logo">
+    </main>
+    <main class="line">
+
+    </main>
+    <main class="m2">
+        <h1 class="text-w">What is </h1>
+        <h1 class="text-y">IMAGINARY ONES?</h1>
+        <h3 class="text-m2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quod placeat laborum ex neque soluta rerum cupiditate iure libero, nobis quaerat doloremque cumque expedita. Velit id ullam obcaecati. Sed, reiciendis?</h3>
+        <img src="b3.png" alt="" class="im2_1" width="300">
+        <img src="b4.png" alt="" class="im2_2" width="300">
+        <img src="c1.png" alt="" class="im2_3" width="250">
+        <h1 class="butt_m2">READ LORE</h1>
+    </main>
+    <main class="m3">
+        <div class="m3_t1">
+            <h1 class="we">We are going to</h1>
+            <div class="lqjrdie95ho">
+                <div class="face -front"><h1 class="cube1-h1">LOVE</h1></div>
+                <div class="face -left">1</div>
+                <div class="face -top"><h1 class="cube1-h1">PEACE</h1></div>
+                <div class="face -bottom"><h1 class="cube1-h1">VIALENCE</h1></div>
+                <div class="face -right">5</div>
+                <div class="face -back"><h1 class="cube1-h1">? ? ?</h1></div>
+            </div>
+        </div>
+        <div class="m3_t2"><video src="https://imaginaryones.com/_nuxt/videos/webreel-mobile.de03618.mp4" loop autoplay width="300"></video></div>
+        <div class="m3_t3">
+            
+            <video src="/rainbow.mp4" autoplay loop class="img_back" width="550" height="300"></video>
+            <h1>#ions</h1>
+        </div>
+        <div class="m3_t4"></div>
+        <div class="m3_t5"></div>
+    </main>
+    <main class="m4">
+        <img src="b4.png" alt="" class="img1_m4">
+        <img src="b3.png" alt="" class="img2_m4">
+        <img src="c1.png" alt="" class="img3_m4">
+        <h1 class="text-viol" align="center">WHY BE</h1>
+        <h1 class="text-y" align="center">IMAGINARY?</h1>
+        <h3 class="text-b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempora neque unde omnis consectetur cupiditate, sapiente rem porro aliquid deserunt qui error! Fugit quas doloremque commodi eveniet voluptatibus similique reprehenderit.</h3>
+        <h3 class="text-b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempora neque unde omnis consectetur cupiditate, sapiente rem porro aliquid deserunt qui error! Fugit quas doloremque commodi eveniet voluptatibus similique reprehenderit.</h3>
+        <h3 class="text-b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempora neque unde omnis consectetur cupiditate, sapiente rem porro aliquid deserunt qui error! Fugit quas doloremque commodi eveniet voluptatibus similique reprehenderit.</h3>
+    </main>
+    <main class="m5">
+        <div class="m5_lt">
+            <img src="b3.png" alt="" class="m5_img1">
+            <img src="b4.png" alt="" class="m5_img2">
+            <div class="m5_pzag"> METAVERSE</div>
+            <div class="m5_pzag"> PARTNERSHIPS</div>
+            <div class="m5_zag"> BRAND BUILDING</div>
+            <div class="m5_pzag"> COMMUNITY</div>
+            <div class="m5_pzag"> METAVERSE</div>
+        </div>
+        <div class="m5_rt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est omnis commodi aspernatur repellendus nam aliquam ratione eligendi eum, nemo doloribus sapiente repudiandae inventore ex nobis reiciendis amet voluptatibus corporis eius, ut quod laboriosam doloremque cum aliquid! Dolor nisi ipsam maxime. Possimus voluptatum sint sequi a fugiat velit labore doloremque iusto.</div>
+    </main>
+    <div class="m6">
+        <video src="/rainbow.mp4" autoplay loop class="video_back" width="900" height="300"></video>
+        <h1 class="textbig">8888 MAGICAL</h1>
+    </div>
+    <h1 class="chah1">CHARACTERS</h1>
+    <main class="m7"></main>
+    <main class="m8">
+        <h1 class="m8_h1">IMAGINARY VALUES?</h1>
+        <article>
+            <div class="v1_m8">
+                <video src="https://imaginaryones.com/_nuxt/videos/spark.3766ce3.mp4" autoplay loop muted></video>
+                <h1>Find Your Spark</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ratione nulla accusamus laudantium.</p>
+            </div>
+            <div class="v2_m8">
+                <video src="https://imaginaryones.com/_nuxt/videos/good-vibes.d7590af.mp4" autoplay loop muted></video>
+                <h1>Good Vibes Only</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ratione nulla accusamus laudantium.</p>
+            </div>
+            <div class="v3_m8">
+                <video src="https://imaginaryones.com/_nuxt/videos/dream-big.e22786b.mp4" autoplay loop muted></video>
+                <h1>Dream Big</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ratione nulla accusamus laudantium.</p>
+            </div>
+        </article>
+    </main>
+    <main class="m9">
+        <div class="m9_zag">
+            <h1 class="m9_pzag1">IMAGINARY</h1>
+            <h1 class="m9_pzag2">TEAM</h1>
+        </div>
+        <div class="m9_who">
+            <div class="m9_who_1">
+                <article>CREATOR</article>
+                <video src="https://imaginaryones.com/_nuxt/videos/cmt.198fdef.mp4" autoplay loop width="300"></video>
+                <h1>ALEX</h1>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+            </div>
+            <div class="m9_who_2">
+                <article>COMMUNITY</article>
+                <video src="https://imaginaryones.com/_nuxt/videos/caleb.aace662.mp4" autoplay loop width="300"></video>
+                <h1>SAX</h1>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+            </div>
+        </div>
+    </main>
+    <main class="m10">
+        <img src="b4.png" alt="" class="img1_m10">
+        <img src="b3.png" alt="" class="img2_m10">
+        <h1 class="text-w_m10">JOIN THE</h1>
+        <h1 class="text-y_m10"> COMMUNITY</h1>
+        <h2 class="text-m10">We can't reply to all emails but all good vibes are appreciated!
+            You can email us at hello@imaginaryones.com</h2>
+    </main>
+    <footer>
+        <img src="logo_black.png" alt="" width="200">
+        <h3>© 2023 All Rights Reserved,Imaginary Ones Pte Ltd</h3>
+    </footer>
+</body>
+</html>
